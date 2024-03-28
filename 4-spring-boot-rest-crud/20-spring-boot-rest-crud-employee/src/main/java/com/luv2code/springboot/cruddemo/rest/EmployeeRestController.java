@@ -17,8 +17,8 @@ public class EmployeeRestController {
     // inject employee dao(using constructor injection)
     @Autowired
     public EmployeeRestController(EmployeeService theEmployeeService){
-        employeeService = theEmployeeService
-        ;
+        employeeService = theEmployeeService;
+
     }
 
     // expose "/employees" and return list of employees
