@@ -18,7 +18,7 @@ public class CruddemoApplication {
 		return runner->{
 			//createStudent(studentDAO);
 			createMultipleStudents(studentDAO);
-			//readStudent(studentDAO);
+			readStudent(studentDAO);
 			//queryForStudents(studentDAO);
 			//queryForStudentsByLastName(studentDAO);
 			//updateStudent(studentDAO);
@@ -47,7 +47,7 @@ public class CruddemoApplication {
 		int studentId =1;
 		System.out.println(" Getting  student with id:"+studentId);
 		Student myStudent = studentDAO.findById(studentId);
-		// change the first name to "John"
+
 		System.out.println("Updating student...");
 		myStudent.setFirstName("John");
 
