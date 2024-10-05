@@ -26,6 +26,18 @@ public class InstructorDetail {
     @Column(name ="hobby")
     private String hobby;
 
+    // add @OneToOne annotation
+    @OneToOne(mappedBy = "instructorDetail",cascade = {CascadeType.DETACH,CascadeType.PERSIST,CascadeType.REFRESH})
+    private Instructor instructor;
+
+    public Instructor getInstructor() {
+        return instructor;
+    }
+
+    public void setInstructor(Instructor instructor) {
+        this.instructor = instructor;
+    }
+
     public InstructorDetail() {
     }
 
